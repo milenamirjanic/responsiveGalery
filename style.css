@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  color: #303030;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+body h1 {
+  margin: 10px 20px;
+  font-weight: 400;
+  font-size: 28px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body h1 {
+    font-size: 20px;
+  }
+}
+#wrapper {
+  padding: 10px;
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #wrapper {
+    width: 80%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #wrapper {
+    width: 70%;
+    font-size: 16px;
+  }
+}
+#wrapper #container {
+  padding: 10px;
+  display: grid;
+  grid-gap: 10px 10px;
+}
+@media screen and (max-width: 767px) {
+  #wrapper #container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #wrapper #container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  #wrapper #container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+#wrapper .p {
+  margin: 10px;
+  text-align: justify;
+}
+.box {
+  width: 90%;
+  background-color: #34bdeb;
+  border-radius: 5%;
+  border: 1px solid ;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .box {
+    margin: 10px auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .box {
+    margin: 10px;
+  }
+}
+.box img {
+  padding: 5%;
+  width: 90%;
+}
+.box p {
+  background-color: white;
+  border-top: #303030;
+  margin: 0;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 5px;
+}

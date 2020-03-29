@@ -1,0 +1,119 @@
+@w : width;
+
+@primary-margin: 0 auto;
+@primary-color: #34bdeb;
+@primary-grey: #303030;
+@font-family: Verdana, Arial, Helvetica, sans-serif;
+
+.marPad() {
+    margin: 0;
+    padding: 0;
+}
+
+.padd() {
+    padding: 10px;
+}
+
+#Msizes() {
+	mobile:  767px;
+	tablet:  768px;
+	Mtablet: 1023px;
+	desktop: 1024px;
+}
+
+
+
+body {
+    margin: 0;
+    color: @primary-grey;
+    font-family: @font-family;
+    background-color: black;
+
+    h1 {
+        margin: 10px 20px;
+        font-weight: 400;
+        font-size: 28px;
+        @media screen and  ( min-width: #Msizes[tablet]) and ( max-width:  #Msizes[Mtablet]){
+            font-size:24px;
+        }
+
+        @media screen and  ( min-width :  #Msizes[desktop]) {
+            font-size: 20px;
+        }
+    }
+}
+
+#wrapper {
+    .padd();
+	background-color: white;
+    @{w} : 90%;
+    margin: @primary-margin;
+    font-size:24px;
+
+	@media screen and  (min-width :#Msizes[tablet]) and (max-width :#Msizes[Mtablet]){
+			@{w} : 80%; 
+            font-size:20px;
+	}
+
+	@media screen and  (min-width :#Msizes[desktop]) {
+			@{w} : 70%;
+            font-size: 16px;
+    }
+    
+    #container {
+        .padd();
+
+        display: grid;
+        grid-gap: 10px 10px;
+        @media screen and (max-width: #Msizes[mobile]) {   
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media screen and  (min-width :#Msizes[tablet]) and (max-width :#Msizes[Mtablet]){
+            grid-template-columns: repeat(3,1fr);;
+            grid-template-rows: repeat(4,1fr);
+        }
+
+        @media screen and  (min-width :#Msizes[desktop]) {
+            grid-template-columns: repeat(5,1fr);;
+            grid-template-rows: repeat(2,1fr);
+        }
+    }
+
+    .p {
+        margin: 10px;
+        text-align: justify;
+    }
+}
+
+.box {
+    @{w} : 90%;
+    background-color: @primary-color;
+    border-radius: 5%;
+    border: 1px solid ;
+    overflow: hidden;
+
+    @media screen and (max-width: #Msizes[mobile]) {   
+        margin: 10px auto;
+    }
+
+    @media screen and (min-width: #Msizes[tablet]) {   
+        margin: 10px;
+    }
+
+
+    img {
+        padding: 5%;
+        width: 90%;
+    }
+
+    p {
+        background-color: white;
+        border-top: @primary-grey;
+        margin: 0;
+        font-size: 1.2em;
+        text-align: center;
+        padding: 5px;
+    }
+}
